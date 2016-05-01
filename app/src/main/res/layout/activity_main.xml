@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.terry.androidanimation.MainActivity">
+<ImageView
+    android:id="@+id/view"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:src="@mipmap/ic_launcher"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_marginTop="25dp"
+    android:layout_toLeftOf="@+id/imageView"
+    android:layout_toStartOf="@+id/imageView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="translate"
+        android:id="@+id/translate"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="scale"
+        android:id="@+id/scale"
+        android:layout_alignBottom="@+id/translate"
+        android:layout_toRightOf="@+id/translate"
+        android:layout_toEndOf="@+id/translate" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="rotate"
+        android:id="@+id/rotate"
+        android:layout_alignBottom="@+id/scale"
+        android:layout_toRightOf="@+id/scale"
+        android:layout_toEndOf="@+id/scale" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="alpha"
+        android:id="@+id/alpha"
+        android:layout_alignTop="@+id/rotate"
+        android:layout_toRightOf="@+id/rotate"
+        android:layout_toEndOf="@+id/rotate" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="drawable"
+        android:id="@+id/button"
+        android:layout_above="@+id/scale"
+        android:layout_toRightOf="@+id/translate"
+        android:layout_toEndOf="@+id/translate"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/imageView"
+        android:visibility="gone"
+        android:background="@drawable/frame_animation"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/view"
+        android:layout_toRightOf="@+id/button"
+        android:layout_toEndOf="@+id/button" />
+
+</RelativeLayout>
