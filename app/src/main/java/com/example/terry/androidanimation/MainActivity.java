@@ -1,5 +1,6 @@
 package com.example.terry.androidanimation;
 
+import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ public Button Alpha;
     public Button scale;
     public Button translate;
     public Button bt;
+    public Button bt2;
   public   ImageView im;
     public   ImageView Iimage;
     @Override
@@ -26,6 +28,7 @@ public Button Alpha;
         rotate = (Button) findViewById(R.id.rotate);
         scale = (Button) findViewById(R.id.scale);
         bt = (Button) findViewById(R.id.button);
+        bt2 = (Button) findViewById(R.id.next);
         translate = (Button) findViewById(R.id.translate);
         Iimage = (ImageView) findViewById(R.id.imageView);
         Alpha.setOnClickListener(MainActivity.this);
@@ -33,7 +36,9 @@ public Button Alpha;
         scale.setOnClickListener(MainActivity.this);
         translate.setOnClickListener(MainActivity.this);
         bt.setOnClickListener(MainActivity.this);
-}
+        bt2.setOnClickListener(MainActivity.this);
+
+    }
     @Override
     public void onClick(View v){
          switch (v.getId())
@@ -59,6 +64,12 @@ public Button Alpha;
                  AnimationDrawable an = (AnimationDrawable) Iimage.getBackground();
                  an.start();
                  break;
+             case R.id.next:
+                 //Activity切换动画及ViewGroup动画
+                 Intent i = new Intent(this,Main2Activity.class);
+                 startActivity(i);
+                 //为Activity指定进入和退出动画
+                 overridePendingTransition(R.anim.enter_anim,R.anim.exit_anim);
          }
     }
 }

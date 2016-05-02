@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layoutAnimation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:delay="0.5"
+
+    android:animationOrder="normal"
+    android:animation="@anim/scal"
+    />
+    <!--delay 表示子元素开始动画的时间延迟比如子元素入场动画的时间为1000ms，那么0.5表示每个子元素都延迟500ms-->
+<!--animationOrder 表示子元=素动画的顺序。normal ：顺序显示 random:随机显示  reverse： 随机显示-->
